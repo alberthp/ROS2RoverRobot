@@ -9,6 +9,7 @@ There are two methods based on the development platform:
 * Method 2: Arduino IDE
 
 ## Method 1: Visual Studio Code + PlatformIO Extension
+https://technologiehub.at/project-posts/micro-ros-on-esp32-tutorial/
 
 1. Install (PlatformIO)[https://platformio.org/] Extension in VSC. If correctlyl installed, icon appears on the left column
 2. Install ESP-IDF Extension in VSC. If correctlyl installed, icon appears on the left column (VSC Activity bar)
