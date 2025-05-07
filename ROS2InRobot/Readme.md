@@ -9,6 +9,12 @@ There are two methods based on the development platform:
 * Method 2: Arduino IDE
 
 ## Method 1: Visual Studio Code + PlatformIO Extension
+
+### Setup
+Development setup
+1. Windows 11 + WSL2 + Ubuntu 24.04 LTS (under WSL2)
+2. ROS 2 Jazzy Jalisco (for Ubuntu 24.04)
+
 https://technologiehub.at/project-posts/micro-ros-on-esp32-tutorial/
 
 1. Install (PlatformIO)[https://platformio.org/] Extension in VSC. If correctlyl installed, icon appears on the left column
@@ -26,6 +32,9 @@ https://technologiehub.at/project-posts/micro-ros-on-esp32-tutorial/
    2. Enter the following board manager into the *Additional Board Manager URLs* field: *https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json* ![Install Additional board](./imgs/ArduinoIDEAddBoard.png)
    3. Open Boards Manager. Go to Tools -> Board -> Boards Manager…
    4. Search for ESP32 and select esp32 by Espressif Systems  ![Install Additional board](./imgs/ArduinoIDEUseBoard.png)
+  
+
+
 
 #### Testing installation
 
@@ -46,6 +55,7 @@ https://technologiehub.at/project-posts/micro-ros-on-esp32-tutorial/
 4. Search for downloaded library (micro_ros_arduino-jazzy.zip for the test case)
 5. Whait for installation. In Output window: "Library installed" when successfuly installed
 
-#List of used resources
-* https://www.youtube.com/watch?v=qtVFsgTG3AA
-* https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/
+> [!TIP]
+> !List of used resources
+> [Tutorial 1]( https://www.youtube.com/watch?v=qtVFsgTG3AA)
+> [Tutorial 2](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
