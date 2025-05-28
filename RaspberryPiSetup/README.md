@@ -2,6 +2,15 @@
 
 This script enables manual teleoperation control of a robot via keyboard input, sending commands over a serial port in JSON format. It supports real-time adjustment of linear (X) and angular (Z) velocities using arrow keys, with a spacebar command to stop the robot and escape to exit. The script opens the specified serial port, continuously listens for keyboard events, and sends updated motion commands at a regular interval. It also reads and displays incoming serial data for feedback.
 
+Communication with ESP32 controller is based on the JSON communication based defined by [Waveshare](https://www.waveshare.com/wiki/WAVE_ROVER)
+
+ROS Control - CMD_ROS_CTRL
+```bash
+{"T":13,"X":0.1,"Z":0.3}
+```
+Instruction using the standard movement instruction of ROS. The X value is the moving linear velocity in m/s and the Z value is the steering angular velocity in rad/s.
+
+
 ## Usage
 
 ```bash
