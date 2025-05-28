@@ -1,6 +1,17 @@
 # Guide to configure the Raspberry Pi 
 
-## Hardware
+This guide includes:
+
+# Table of Contents
+- [System configuration](#system-configuration)
+- [Basic program using JSON based Waveshare protocol emulating ROS2 movement command](#basic-driving-program)
+
+
+## 1. System configuration 
+
+Subsetion for correct OS, basic developing tools installation and configuration
+
+### Hardware
 * Raspberry Pi 4b with 8gB
 * microSD Samsung 32GB EVO Plus
 
@@ -21,24 +32,26 @@ This port is used for communications between Raspberry Pi 4b and ESP32 robot boa
 Steps to open the port:
 
 1. Disable Serial Console (if enabled):
-   * Open Raspberry Pi configuration tool: `sudo raspi-config`
-   * Navigate to 3 Interface Options.
-   * Select P6 Serial Port.
-   * When asked "Would you like a login shell to be accessible over serial?", select **No**.
-   * When asked "Would you like the serial port hardware to be enabled?", select **Yes**.
-   * Exit raspi-config and reboot the Pi: `sudo reboot`
+    * Open Raspberry Pi configuration tool: `sudo raspi-config`
+    * Navigate to 3 Interface Options.
+    * Select P6 Serial Port.
+    * When asked "Would you like a login shell to be accessible over serial?", select **No**.
+    * When asked "Would you like the serial port hardware to be enabled?", select **Yes**.
+    * Exit raspi-config and reboot the Pi: `sudo reboot`
 
 2. Swaping UARTs if necessary (ensure UART is mapped to the GPIO pins)
-   * Edit `config.txt to` Configure UART: `sudo nano /boot/firmware/config.txt`
-   * Add or modify the following lines:
-     * Enable UART: `enable_uart = 1`
-     * ensure these lines are NOT present or are commented out:
-       * `# dtoverlay=disable-bt   <-- DO NOT USE THIS, it disables Bluetooth`
-       * `# dtoverlay=miniuart-bt  <-- DO NOT USE THIS, it swaps ttyAMA0 and ttyS0`
-   * Save file and reboot the Pi:  `sudo reboot`
+    * Edit `config.txt to` Configure UART: `sudo nano /boot/firmware/config.txt`
+    * Add or modify the following lines:
+        * Enable UART: `enable_uart = 1`
+        * ensure these lines are NOT present or are commented out:
+            * `# dtoverlay=disable-bt   <-- DO NOT USE THIS, it disables Bluetooth`
+            * `# dtoverlay=miniuart-bt  <-- DO NOT USE THIS, it swaps ttyAMA0 and ttyS0`
+    * Save file and reboot the Pi:  `sudo reboot`
 
 3. Verify the Serial Port and Bluetooth:
-   * Check Serial Port: confirm which device serial0 points to `ls -l /dev/serial*` -> `lrwxrwxrwx 1 root root (other info) /dev/serial0 -> ttyS0`
-   * Check Bluetooth Status: `sudo systemctl status bluetooth` -> `Active: active (running)`
+    * Check Serial Port: confirm which device serial0 points to `ls -l /dev/serial*` -> `lrwxrwxrwx 1 root root (other info) /dev/serial0 -> ttyS0`
+    * Check Bluetooth Status: `sudo systemctl status bluetooth` -> `Active: active (running)`
 
-     
+
+## 2. Basic driving program 
+using JSON based Waveshare protocol emulating ROS2 movement command.
