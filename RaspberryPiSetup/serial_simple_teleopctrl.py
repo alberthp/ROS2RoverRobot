@@ -59,7 +59,7 @@ current_z = 0.0
 x_increment = 0.05 # Adjust this value for how much X changes per keypress
 z_increment = 0.1  # Adjust this value for how much Z changes per keypress
 max_speed = 1.0    # Maximum absolute linear speed
-max_turn = 5.0     # Maximum absolute angular speed
+max_turn = 6.28318     # Maximum absolute angular speed 2*PI
 
 def read_serial():
     """Reads data from the serial port and prints it."""
