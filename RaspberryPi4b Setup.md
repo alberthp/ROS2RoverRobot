@@ -55,3 +55,4 @@ Steps to open the port:
 
 ## 2. Basic driving program 
 using JSON based Waveshare protocol emulating ROS2 movement command.
+For detailed setup instructions for the Raspberry Pi, see [RaspberryPiSetup/README.md](RaspberryPiSetup/README.md).
